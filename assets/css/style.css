@@ -1,0 +1,137 @@
+/** mobile and general styling first **/
+
+@font-face {
+    font-family: 'dancing_script_otregular';
+    src: url('fonts/dancingscript-regular-webfont.woff2') format('woff2'),
+         url('fonts/dancingscript-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+html {
+    font-size: 62.5%; /**everything is divisible by 10**/
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.8rem; /**18px**/
+    line-height: 1.5;
+    color: #323232;
+
+}
+
+/** typography **/
+h1,
+h2 {
+    font-family: 'dancing_script_otregular', cursive;
+}
+
+h2::before {
+    content: '';
+    border-top: 0.3rem solid rebeccapurple;
+    width: 5rem;
+    height: 1rem;
+    display: block;
+}
+
+h2::after {
+    content: '';
+    border-bottom: 0.1rem solid #1e1e1e;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 1rem;
+    display: block;
+}
+
+
+
+
+
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+
+.container {
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/** header **/
+header {
+    background-color: #2a314a;
+}
+
+header > .container {
+    padding: 2%;
+    flex-direction: column;
+}
+
+/** logo **/
+.logo {
+    display: block;
+    width: 6rem;
+    height: auto;
+    margin-bottom: 2.4rem;
+}
+
+/** nav **/
+.main-menu { 
+    display:flex;
+    flex-flow: column;
+}
+
+.main-menu a {
+    color: #b5d8f5;
+    text-transform: uppercase; 
+    letter-spacing: 0.1rem; /*** spaces out letters **/
+}
+
+
+/*** content area **/
+
+section > .container {
+    flex-direction: column;
+}
+
+/** word spacing **/
+.word-spacing {
+    word-spacing: 2rem;
+}
+
+.font-variant {
+    font-variant: small-caps;
+}
+
+.text-shadow {
+    /** offset-x | offset-y | blur | color **/
+    text-shadow: 0.1rem 0.1rem 0.2rem cyan;
+}
+
+section:nth-of-type(3) p::first-letter {
+    font-size: 5rem;
+}
+
+.text-indenting {
+    text-indent: 2rem;;
+}
+
+
+
+/*** visually hidden **/
+/** hides the text visually, but its available to screen readers
+http://snook.ca/archives/html_and_css/hiding-content-for-accessibility **/
+.visuallyhidden {
+    border: 0;
+    height: 0.1rem;
+    margin: -0.1rem;
+    overflow: hidden;
+    padding: 0;
+    width: 0.1rem;
+    position: absolute;
+}
